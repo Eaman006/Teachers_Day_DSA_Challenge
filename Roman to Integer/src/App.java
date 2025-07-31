@@ -2,35 +2,44 @@ import java.util.*;
 class Solution {
     public int romanToInt(String s) {
         int r = 0;
-        for(int i =0; i<s.length(); i++){
+        int p=0;
+        for(int i =s.length()-1; i>=0; i--){
             char a = s.charAt(i);
+            int c = 0;
             switch (a) {
                 case 'I':
-                    r=r+1;
-
+                    c=1;
                     break;
                 case 'V':
-                    r=r+5;
+                    c=5;
                     break;
                 case 'X':
-                    r=r+10;
+                    c=10;
                     break;
                 case 'L':
-                    r=r+50;
+                    c=50;
                     break;
                 case 'C':
-                    r=r+100;
+                    c=100;
                     break;
                 case 'D':
-                    r=r+500;
+                    c=500;
                     break;
                 case 'M':
-                    r=r+1000;
+                    c=1000;
                     break;
-            
                 default:
+                    c=0;
                     break;
-            }           
+            }
+            if (p>c) {
+                r-=c;
+                
+            }
+            else{
+                r+=c;
+            }
+            p=c;           
         }
         return r;      
     }
