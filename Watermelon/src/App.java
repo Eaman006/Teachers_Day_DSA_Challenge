@@ -4,10 +4,10 @@ public class App {
         Scanner sc = new Scanner(System.in);
         int n=sc.nextInt();
         sc.close();
-        if (n%2==0 & n!=2) {
+        if (n%2==0 && n!=2) {
             System.out.println("yes");            
         }
-        if (n==2) {
+        else if (n==2) {
             System.out.println("no");            
         }
         else{
