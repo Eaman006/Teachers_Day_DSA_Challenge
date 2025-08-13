@@ -8,15 +8,24 @@ public class App {
         for(int i =0; i<n; i++){
             String s = sc.nextLine();
             switch (s) {
-                case "--x":
-                                    
-                    
+                case "--X":
+                    --x;                    
                     break;
+                case "++X":
+                    ++x;                    
+                    break;
+                case "X--":
+                    x--;                    
+                    break;
+                case "X++":
+                    x++;                    
+                    break;
+                
             
                 default:
                     break;
             }
-
         }
+        System.out.println(x);
     }
 }
