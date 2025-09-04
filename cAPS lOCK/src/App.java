@@ -4,33 +4,23 @@ public class App {
         Scanner sc = new Scanner(System.in);
         String s = sc.nextLine();
         sc.close();
-        boolean c= false;
-        StringBuilder result = new StringBuilder();
-        if (s.toLowerCase().equals("capslock")) {
-            System.out.println(s);
-        }
-        else if (s.length()==1 && s.equals(s.toLowerCase())) {
-            System.out.println(s.toUpperCase());
-        }
-        else if (s.length()==1 && s.equals(s.toUpperCase())) {
+        String a = s.substring(1);
+        StringBuilder r=new StringBuilder();
+        if (s.equals(s.toUpperCase())) {
             System.out.println(s.toLowerCase());
+            
         }
-        else if(s.equals(s.toUpperCase())){
-            System.out.println(s.toLowerCase());
-        }
-        else if(s.equals(s.toLowerCase())){
-            System.out.println(s);
-        }
-        else if(Character.isLowerCase(s.charAt(0))) {
-            result.append(Character.toUpperCase(s.charAt(0)));
-            for(int i=1; i<s.length(); i++) {
-                result.append(Character.toLowerCase(s.charAt(i)));
-            }
-            System.out.println(result.toString());
+        else if (a.equals(a.toUpperCase())){
+            r=r.append(String.valueOf(s.charAt(0)).toUpperCase());
+            r.append(a.toLowerCase());
+            System.out.println(r);
+
+            
         }
         else{
             System.out.println(s);
         }
+        
         
         
 
