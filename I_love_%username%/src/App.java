@@ -9,8 +9,12 @@ public class App {
             a[i]=sc.nextInt();
         }
         sc.close();
+        int b=a[0];
+        int w=0;
         for(int i = 0; i<n; i++){
-            
+            if (a[i]) {
+                
+            }
         }
         System.out.println(c);
     }
